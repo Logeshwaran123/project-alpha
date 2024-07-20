@@ -1,0 +1,30 @@
+[
+  {
+    "_uid": "U01",
+    "_uname": "Logesh",
+    "_upwd": "123",
+    "_userBio": "I'm a developer who loves food.",
+    "_orderDet": ["O2024-01"]
+  },
+  {
+    "_uid": "U02",
+    "_uname": "Vignesh",
+    "_upwd": "567",
+    "_userBio": "I'm a Accounting Assistant who loves travelling.",
+    "_orderDet": ["O2024-02", "O2024-04"]
+  },
+  {
+    "_uid": "U03",
+    "_uname": "Abdul",
+    "_upwd": "125",
+    "_userBio": "I'm an Electrician who loves music.",
+    "_orderDet": ["O2024-03"]
+  },
+  {
+    "_uid": "U04",
+    "_uname": "Hilary",
+    "_upwd": "234",
+    "_userBio": "I'm a Businessman who loves spending good time.",
+    "_orderDet": ["O2024-05"]
+  }
+]
