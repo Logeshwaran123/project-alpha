@@ -25,6 +25,7 @@ module.exports.deleteUser = function (req, res) {
   res.status(200).json({ status: "Success", message: "User deleted" });
 };
 
+// ---- UPDATED USER
 module.exports.updateUser = function (req, res) {
   const user = users.find((cur) => cur._uid == req.params.id);
   const reqData = req.body;
