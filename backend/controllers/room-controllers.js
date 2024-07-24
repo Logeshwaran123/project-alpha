@@ -14,7 +14,7 @@ module.exports.deleteAllRooms = function (req, res) {
 };
 
 module.exports.addOneRoom = function (req, res) {
-  const room = { _room_no: `R0${rooms.length + 1}`, details: req.body };
+  const room = { _room_no: req.roomId, details: req.body };
 
   rooms.push(room);
 

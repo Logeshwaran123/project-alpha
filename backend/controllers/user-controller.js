@@ -8,7 +8,7 @@ module.exports.getAllUsers = function (req, res) {
 };
 
 module.exports.deleteAllUsers = function (req, res) {
-  const users = JSON.parse(fs.readFileSync(`./dev-data/users.json`));
+  fs.writeFileSync(`./dev-data/users.json`, "[]");
   res.status(204).json({ status: "Success", message: "All Users Deleted" });
 };
 
@@ -25,22 +25,32 @@ module.exports.deleteUser = function (req, res) {
   res.status(200).json({ status: "Success", message: "User deleted" });
 };
 
-// ---- UPDATEDqq USER
+module.exports.addUser = function (req, res) {
+  const user = { _uid: req.userId, details: req.body };
+  users.push(user);
+  fs.writeFileSync(`./dev-data/users.json`, JSON.stringify(users));
+  res.status(201).json({ status: "Success", message: "User Created" });
+};
+
 module.exports.updateUser = function (req, res) {
+  // TODO: 1 Get the Particular User
   const user = users.find((cur) => cur._uid == req.params.id);
+  // TODO: 2 Store the Requested Info from the Body which are need to be updated
   const reqData = req.body;
-  if (reqData.hasOwnProperty("_uid")) {
-    res
-      .status(400)
-      .json({ status: "Unsuccessful", message: "ID cannot be changed" });
-  } else {
-    const ind = users.indexOf(user);
-    for (const [key, value] of Object.entries(req.body)) {
+  const index = users.indexOf(user);
+
+  if (!reqData.hasOwnProperty("_uid")) {
+    // FOR OF LOOP [It is a loop condition over any object data and returns the values of the iterable.]
+    for (const [key, value] of Object.entries(reqData)) {
       user[key] = value;
     }
-    users.splice(ind, 1, user);
-    console.log(users);
-    fs.writeFileSync("./dev-data/users.json", JSON.stringify(users));
+    // TODO: 3 Add the Updated User info into the Users ARRAY
+    users.splice(index, 1, user);
+    fs.writeFileSync(`./dev-data/users.json`, JSON.stringify(users));
     res.status(200).json({ status: "Success", data: user });
+  } else {
+    res
+      .status(400)
+      .json({ status: "Unsuccessful", message: "User ID cannot be changed" });
   }
 };

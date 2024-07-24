@@ -1,0 +1,32 @@
+[
+  {
+    "_fid": "F01",
+    "_createdAt": "2024-07-23T14:34:08.844Z",
+    "_modifiedAt": "2024-07-23T14:55:08.844Z",
+    "_details": {
+      "_foodName": "Beef Steak",
+      "_foodDescription": "General Food Description",
+      "_numReviews": 1,
+      "_price": 100,
+      "_ingredients": ["Beef", "Seasonings", "Soya Sauce", "Chilli Flakes"],
+      "_cookingTime": "10",
+      "_ratings": 4.3,
+      "_category": "M",
+      "_isNonVeg": true
+    }
+  },
+  {
+    "_fid": "F02",
+    "_details": {
+      "_foodName": "Beef Steak",
+      "_foodDescription": "General Food Description",
+      "_numReviews": 1,
+      "_price": 200,
+      "_ingredients": ["Beef", "Seasonings", "Soya Sauce", "Chilli Flakes"],
+      "_cookingTime": "10",
+      "_ratings": 4.3,
+      "_category": "M",
+      "_isNonVeg": true
+    }
+  }
+]
