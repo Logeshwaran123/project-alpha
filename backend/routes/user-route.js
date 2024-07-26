@@ -21,6 +21,11 @@ userRoute
   .route("/user/:id")
   .get((req, res) => userControllers.getUser(req, res))
   .delete((req, res) => userControllers.deleteUser(req, res))
-  .patch((req, res) => userControllers.updateUser(req, res));
+  .patch(
+    (req, res, next) => {
+      req.params._uname = next();
+    },
+    (req, res) => userControllers.updateUser(req, res)
+  );
 
 module.exports = userRoute;
