@@ -28,5 +28,24 @@
       "_category": "M",
       "_isNonVeg": true
     }
+  },
+  {
+    "_fid": "F03",
+    "_details": {
+      "_foodName": "Gobi Manchurian",
+      "_foodDescription": "General Food Description",
+      "_numReviews": 1,
+      "_price": 55,
+      "_ingredients": [
+        "Cauliflower",
+        "Seasonings",
+        "Soya Sauce",
+        "Chilli Flakes"
+      ],
+      "_cookingTime": "10",
+      "_ratings": 4.3,
+      "_category": "M",
+      "_isNonVeg": true
+    }
   }
 ]

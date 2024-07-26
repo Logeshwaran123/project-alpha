@@ -22,10 +22,25 @@ userRoute
   .get((req, res) => userControllers.getUser(req, res))
   .delete((req, res) => userControllers.deleteUser(req, res))
   .patch(
+    // Middleware for UserName Validation
     (req, res, next) => {
-      req.params._uname = next();
+      let nameTaken = users.find(
+        (cur) => cur._details._uname == req.body._details._uname
+      );
+      if (!nameTaken) {
+        res._details.message = "Username Already Taken";
+        res
+          .status(400)
+          .json({ status: "Unsuccessful", message: res._details.message });
+      } else {
+        next();
+      }
     },
     (req, res) => userControllers.updateUser(req, res)
   );
+
+userRoute
+  .route("/orderFood")
+  .post((req, res) => userControllers.order(req, res));
 
 module.exports = userRoute;

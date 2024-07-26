@@ -39,5 +39,3 @@ Basically the Transfer of Request and the Response can be explained using one of
 - REST API - Guidelines and Different HTTP methods
 
 ## Doubts and Queries
-
-@keerthana - Updation of Customers/User route

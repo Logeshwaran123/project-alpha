@@ -15,10 +15,6 @@ foodRoute.use((req, res, next) => {
 foodRoute.route("/food").post((req, res) => foodController.addFood(req, res));
 
 foodRoute
-  .route("/orderFood")
-  .post((req, res) => foodController.order(req, res));
-
-foodRoute
   .route("/food/:id")
   .get((req, res) => foodController.getFood(req, res))
   .patch((req, res) => foodController.updateFood(req, res));
