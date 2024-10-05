@@ -18,9 +18,14 @@ html {
 
   /* COLORS */
   --no-color: rgba(0, 0, 0, 0);
-  --theme-color: #f7f0f5;
-  --txt-color: #5c5552;
-  --drk-txt-color: #433633;
+  --theme-color: #181c14;
+  --txt-color: #f5f5f5;
+  --drk-txt-color: #fffefe;
+  --white: rgba(255, 255, 255);
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* TEMP CSS */
@@ -28,6 +33,7 @@ html {
   font-size: var(--larg);
   font-weight: var(--drk);
   letter-spacing: -3.6px;
+  flex-grow: 3;
 }
 
 /* CLEAR EVERY VISUAL CSS PROPERTIES */
@@ -49,8 +55,11 @@ button {
 nav {
   column-gap: 7.2rem;
   padding: 1.4rem 4rem;
-  color: #5c5552;
-  background-color: var(--theme-color);
+  color: var(--drk-txt-color);
+  /* background-color: var(--theme-color); */
+  position: fixed;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 33%);
 }
 
 search {
@@ -68,14 +77,14 @@ search {
 }
 
 .search-input::placeholder {
-  color: #433633;
+  color: var(--drk-txt-color);
 }
 
 .search-input {
   width: 100%;
   /* background-color: black; */
   font-size: 2rem;
-  border: 1px solid #9f9390;
+  border: 1px solid var(--drk-txt-color);
   border-radius: 5rem;
   padding: 0.6rem 1rem;
 }
@@ -100,7 +109,69 @@ menu {
 }
 
 .btn-sign-up {
-  color: white;
   font-weight: var(--med);
-  background-color: black;
+  color: var(--theme-color);
+  background-color: var(--txt-color);
+}
+
+/* --- HERO SECTION */
+#hero {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(#0006, #0000, #0006 55%),
+    url("./assets/hero-background-image.jpg");
+  background-size: cover;
+  padding: 0 4rem;
+}
+
+.hero-content {
+  font-size: 2rem;
+  line-height: 1.6;
+  width: 52rem;
+  transform: translate(0, 100%);
+  padding: 1rem 2rem;
+  color: var(--white);
+}
+
+#user_email {
+  padding: 1rem 1.5rem;
+  margin-top: 2rem;
+  width: 100%;
+  border-radius: 3rem;
+  border: 2px solid var(--drk-txt-color);
+}
+
+#user_email::placeholder {
+  color: var(--white);
+}
+
+.hero-content::before {
+  content: "GET STARTED";
+  display: inline;
+  padding: 1rem;
+  border-radius: 8px;
+  letter-spacing: 4px;
+  color: var(--drk-txt-color);
+  background-color: var(--theme-color);
+  font-size: 1rem;
+  position: relative;
+  bottom: 10px;
+  font-weight: var(--drk);
+  opacity: 0.8;
+}
+
+.get-started {
+  position: relative;
+}
+
+.ico-get-start {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(25%) translateY(-22.5%);
+  transition: transform 0.33s ease-in-out;
+}
+
+#user_email:hover + .ico-get-start {
+  transform: translateX(55%) translateY(-22.5%);
 }
