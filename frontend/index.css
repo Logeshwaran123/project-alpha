@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* TYPOGRAPHY */
+  font-size: 10px;
+  font-family: "Montserrat", sans-serif;
+  /* WEIGHTS */
+  --reg: 400;
+  --med: 600;
+  --drk: 700;
+
+  /* SIZES */
+  --larg: 3.6rem;
+
+  /* COLORS */
+  --no-color: rgba(0, 0, 0, 0);
+  --theme-color: #f7f0f5;
+  --txt-color: #5c5552;
+  --drk-txt-color: #433633;
+}
+
+/* TEMP CSS */
+.logo-text {
+  font-size: var(--larg);
+  font-weight: var(--drk);
+  letter-spacing: -3.6px;
+}
+
+/* CLEAR EVERY VISUAL CSS PROPERTIES */
+form,
+input,
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+/* HELPER CLASS */
+.flex--cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* --- NAV Section */
+nav {
+  column-gap: 7.2rem;
+  padding: 1.4rem 4rem;
+  color: #5c5552;
+  background-color: var(--theme-color);
+}
+
+search {
+  display: block;
+  position: relative;
+  flex-grow: 1;
+}
+
+.ico-search {
+  top: 50%;
+  right: 0;
+  position: absolute;
+  font-size: 2.4rem;
+  transform: translate(50%, -50%);
+}
+
+.search-input::placeholder {
+  color: #433633;
+}
+
+.search-input {
+  width: 100%;
+  /* background-color: black; */
+  font-size: 2rem;
+  border: 1px solid #9f9390;
+  border-radius: 5rem;
+  padding: 0.6rem 1rem;
+}
+
+menu {
+  column-gap: 2rem;
+}
+
+.ico {
+  font-size: 3rem;
+}
+
+.btn {
+  font-size: 2rem;
+  border: 2px solid black;
+  padding: 0.5rem 1.5rem;
+  border-radius: 3rem;
+}
+
+.btn-sign-in {
+  border-color: var(--no-color);
+}
+
+.btn-sign-up {
+  color: white;
+  font-weight: var(--med);
+  background-color: black;
+}
