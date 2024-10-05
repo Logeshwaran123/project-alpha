@@ -1,0 +1,18 @@
+[
+  {
+    "_uid": "U01",
+    "_details": {
+      "_uname": "Ram",
+      "_pwd": "123Hello",
+      "_email": "ram@email.com"
+    }
+  },
+  {
+    "_uid": "U02",
+    "details": {
+      "_uname": "Ram",
+      "_pwd": "123Hello",
+      "_email": "ram@email.com"
+    }
+  }
+]

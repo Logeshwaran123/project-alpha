@@ -1,0 +1,49 @@
+[
+  {
+    "_foodName": "Beef Kabab",
+    "_summary": "General Food Summary",
+    "_description": "General Food Description",
+    "_numReviews": 1,
+    "_price": 100,
+    "_ingredients": ["Beef", "Seasonings", "Soya Sauce", "Chilli Flakes"],
+    "_cookingTime": 20,
+    "_ratings": 4.3,
+    "_category": "M",
+    "_isNonVeg": true,
+    "_discount": 10,
+    "_imageCover": ["/img/cover-1.jpg", "/img/cover-2.jpg"]
+  },
+  {
+    "_foodName": "Beef Rice Balls",
+    "_summary": "General Food Summary",
+    "_description": "General Food Description",
+    "_numReviews": 1,
+    "_price": 200,
+    "_ingredients": ["Beef", "Seasonings", "Soya Sauce", "Chilli Flakes"],
+    "_cookingTime": 5,
+    "_ratings": 4.3,
+    "_category": "M",
+    "_isNonVeg": true,
+    "_discount": 10,
+    "_imageCover": ["/img/cover-1.jpg", "/img/cover-2.jpg"]
+  },
+  {
+    "_foodName": "Gobi Manchurian",
+    "_summary": "General Food Summary",
+    "_description": "General Food Description",
+    "_numReviews": 1,
+    "_price": 55,
+    "_ingredients": [
+      "Cauliflower",
+      "Seasonings",
+      "Soya Sauce",
+      "Chilli Flakes"
+    ],
+    "_cookingTime": 10,
+    "_ratings": 4.3,
+    "_category": "M",
+    "_isNonVeg": true,
+    "_discount": 10,
+    "_imageCover": ["/img/cover-1.jpg", "/img/cover-2.jpg"]
+  }
+]
